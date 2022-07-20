@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Tестовое задание библиотека Toast
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Техническое задание
+Необходимо реализовать ***Toast*** библиотеку Javascript, для представления не блокирующих уведомлений . Цель состоит
+в том, чтобы создать базовую библиотеку, которую можно настраивать и расширять.
 
-## Available Scripts
+#### Необходимый функционал:
 
-In the project directory, you can run:
+- Показать уведомление.
+- Возможность устанавливать положению уведомления.
+- Возможность устанавливать тип уведомления (уведомления об успехе, ошибке, оповещение и т.д.).
+- Возможность устанавливать длительность показа уведомления.
+- Возможность задавать заголовок и описание уведомления.
+- Возможность устанавливать отступы уведомления.
+- Возможность изменять цвет типа уведомлений.
+- Возможность изменять анимацию появления и исчезновения.
 
-### `yarn start`
+#### Дополнительный функционал:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Возможность "смахивать" уведомления в сторону для быстрого закрытия.
+- Показ до 3 уведомлений одновременно.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Пример графического представления:
 
-### `yarn test`
+Ссылка на макет: [Макет "Toast"](https://xd.adobe.com/view/9efd755b-6a29-49bf-4e13-d5cd74643170-e8cc/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Также проект предполагает:
+- Разделить библиотеку на два основных компонента: представления и логики. Для реализации логики приложения необходимо использовать порождающий паттерн программирования ***"Одиночка"***, который гарантирует, что у класса есть только один экземпляр, и предоставляет к нему глобальную точку доступа (см. подробнее [паттерн Одиночка](https://refactoring.guru/ru/design-patterns/singleton)). При помощи паттерна создать сервисный класс, в котором вы будете задавать конфигурацию и вызывать уведомление. Для реализация представления необходимо использовать **react portals**.
 
-### `yarn build`
+- Настроить конфигурации ***babel***, ***eslint***.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Подключить и настроить бандлер ***Rollup*** для сборки проекта в библиотеку.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Подключить и настроить ***Strorybook*** для проверки работоспособности вашей библиотеки.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Обработку ошибок через паттерн ***Error Boundaries***
 
-### `yarn eject`
+- Проверку типов в React компонентах, передаваемых параметров и подобных объектов.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Использование алиасов для импортирования файлов.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Для react
+- ***node.js*** - программная платформа, основанная на движке V8 (транслирующем JavaScript в машинный код).
+- ***babel*** - транспайлер, преобразующий код из одного стандарта в другой.
+- ***eslint*** - линтер для JavaScript кода.
+- ***yarn*** - менеджер пакетов.
+- ***rollup*** - сборщик ES-модулей.
+- ***stortbook*** - инструмент, используемый для разработки компонентов пользовательского интерфейса в изоляции.
+- ***react*** - JavaScript-библиотека для создания пользовательских интерфейсов.
+- ***prop-types*** - набор валидаторов, которые могут быть использованы для проверки получаемых данных.
+- ***styled-components*** - система стилизации react компонентов.
+- ***cypress*** — e2e тестирование для веб приложений.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Тестирование
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Реализовать e2e тестирование c полным покрытием функционала приложения:
+- Сервис для конфигурации Toast-компонента.
+- Графическое (компонент модуля и т.д.)
 
-## Learn More
+## Полезные ссылки
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[React](https://reactjs.org/docs/getting-started.html)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Rollup](https://rollupjs.org/guide/en/)
+
+[Storybook](https://storybook.js.org/docs/basics/introduction/)
+
+[Eslint](https://eslint.org/docs/user-guide/configuring)
+
+[Babel](https://babeljs.io/docs/en/configuration)
+
+[Тестирование Cypress](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
+
+[Тестирование Detox](https://github.com/wix/Detox/blob/master/docs/README.md)
+
+[Styled-components](https://www.styled-components.com/docs)
+
