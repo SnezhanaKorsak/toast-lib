@@ -1,4 +1,4 @@
 import ToastProvider from 'ToastProvider';
-import ToastItem from 'components/ToastItem';
+import { useToastService } from 'hooks';
 
-export { ToastProvider, ToastItem };
+export { ToastProvider, useToastService };

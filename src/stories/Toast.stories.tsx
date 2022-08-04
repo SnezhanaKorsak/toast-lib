@@ -4,6 +4,10 @@ import ToastProvider from 'ToastProvider';
 import ToastItem from 'components/ToastItem/index';
 
 import { ToastMode, ToastPortalPosition } from 'constants/options';
+import { useToastService } from 'hooks';
+
+import { ToastParams } from 'ToastService/types';
+import { ShowButton } from 'ToastProvider/styled';
 
 export default {
   title: 'Toast-lib',
@@ -37,7 +41,22 @@ export default {
   },
 };
 
-export const Example = (args: any) => <ToastProvider {...args} />;
+export const Example = (args: ToastParams) => {
+  const { createToast } = useToastService();
+
+  const { mode } = args;
+
+  const addToast = () => createToast(mode, args);
+
+  return (
+    <div>
+      <ShowButton type="button" onClick={addToast}>
+        Show Toast
+      </ShowButton>
+      <ToastProvider {...args} />
+    </div>
+  );
+};
 
 Example.args = {
   mode: 'info',
