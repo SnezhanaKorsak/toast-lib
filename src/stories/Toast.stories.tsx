@@ -3,10 +3,9 @@ import React from 'react';
 import ToastProvider from 'ToastProvider';
 import ToastItem from 'components/ToastItem/index';
 
-import { ToastMode, ToastPortalPosition } from 'constants/options';
 import { useToastService } from 'hooks';
 
-import { ToastParams } from 'ToastService/types';
+import { ToastMode, ToastParams, ToastPortalPosition } from 'ToastService/types';
 import { ShowButton } from 'ToastProvider/styled';
 
 export default {

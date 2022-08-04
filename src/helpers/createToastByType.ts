@@ -1,6 +1,6 @@
 import { theme } from 'theme';
 
-import { ToastMode } from 'constants/options';
+import { ToastMode } from 'ToastService/types';
 
 export const createToastByType = (type: ToastMode) => {
   switch (type) {
