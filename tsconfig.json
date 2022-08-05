@@ -8,6 +8,8 @@
       "dom.iterable",
       "esnext"
     ],
+    "declaration": true,
+    "declarationDir": "lib",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -24,5 +26,9 @@
   },
   "include": [
     "src", "src/custom.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
   ]
 }
