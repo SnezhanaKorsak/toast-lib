@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom';
 import { Toast, ToastParams } from 'ToastService/types';
 
 import ToastItem from 'components/ToastItem';
-
-import toastService, { RefType } from 'ToastService';
-import { StyledToastContainer } from 'components/ToastContainer/styled';
 import ErrorBoundary from 'components/ErrorBoundary';
+
+import { RefType } from 'ToastService';
+import { toastService } from 'ToastProvider';
+
+import { StyledToastContainer } from 'components/ToastContainer/styled';
 
 const ToastContainer = forwardRef<RefType, ToastParams>(
   ({ position, autoClose, autoCloseTime, animation }, ref) => {

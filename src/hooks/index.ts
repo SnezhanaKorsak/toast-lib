@@ -1,5 +1,6 @@
 import { createToastByType } from 'helpers/createToastByType';
-import toastService from 'ToastService';
+import { toastService } from '../ToastProvider';
+
 import { ToastMode, ToastParams } from 'ToastService/types';
 
 export const useToastService = () => {

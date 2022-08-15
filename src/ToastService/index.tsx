@@ -28,12 +28,12 @@ class ToastService {
   ): Toast => ({
     id: v1(),
     ...toastOptions,
-    mode: toastOptions.mode ? toastOptions.mode : defaultOptions.mode,
+    mode: toastOptions.mode || defaultOptions.mode,
     title: toastOptions.title || defaultOptions.title,
     message: toastOptions.message || defaultOptions.message,
     backgroundColor: toastOptions.backgroundColor || defaultOptions.backgroundColor,
     textColor: toastOptions.textColor || defaultOptions.textColor,
-    icon: defaultOptions.icon,
+    icon: toastOptions.icon || defaultOptions.icon,
   });
 
   public addToast(defaultOptions: DefaultToastParams, toastOptions: ToastParams) {
@@ -54,6 +54,4 @@ class ToastService {
   };
 }
 
-const toastService = new ToastService();
-
-export default toastService;
+export default ToastService;

@@ -1,9 +1,11 @@
 import React, { useLayoutEffect, useRef } from 'react';
 
 import ToastContainer from 'components/ToastContainer';
-import toastService from 'ToastService';
+import ToastService from 'ToastService';
 
 import { ToastParams } from 'ToastService/types';
+
+export const toastService = new ToastService();
 
 const ToastProvider: React.FC<ToastParams> = (toastOptions) => {
   const toastRef = useRef(null);
